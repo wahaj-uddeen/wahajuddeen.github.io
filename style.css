@@ -1,0 +1,262 @@
+/* === Base Reset === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F2FFF0;
+  color: #2D2D2D;
+  line-height: 1.6;
+}
+
+/* === Typography === */
+h1, h2, h3 {
+  color: #2F5233;
+}
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  color: #2F5233;
+}
+a:hover {
+  color: #6C9A8B;
+}
+
+/* === Navbar === */
+.navbar {
+  background-color: #2F5233;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.navbar ul li {
+  margin: 0 15px;
+}
+.navbar ul li a {
+  color: #F2FFF0;
+  font-weight: 600;
+}
+.navbar ul li.active a {
+  color: #A1CDA8;
+}
+.navbar .socials a img {
+  width: 22px;
+  margin-left: 15px;
+  filter: invert(95%) sepia(10%) saturate(500%) hue-rotate(90deg) brightness(90%) contrast(90%);
+}
+
+/* === Home Section === */
+.home-section {
+  height: 100vh;
+  background: linear-gradient(to right, #F2FFF0, #A1CDA8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.overlay {
+  padding: 20px;
+}
+.overlay h1 {
+  font-size: 4rem;
+  font-weight: 800;
+}
+.subtext {
+  font-style: italic;
+  font-size: 1.3rem;
+  margin-top: 10px;
+  color: #6C9A8B;
+}
+.scroll {
+  margin-top: 20px;
+  font-style: italic;
+}
+.scroll-icon {
+  font-size: 2rem;
+  margin-top: 20px;
+  animation: bounce 1.5s infinite;
+  color: #2F5233;
+}
+
+/* === Bounce Animation === */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+/* === Section Layouts === */
+.page-section {
+  display: none;
+  padding: 60px 30px;
+}
+
+/* === Column Layout === */
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+.column {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+/* === Boxes === */
+.box {
+  background-color: #A1CDA8;
+  border: 1px solid #6C9A8B;
+  padding: 25px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 8px rgba(47, 82, 51, 0.1);
+}
+.box h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+.box h3 {
+  font-size: 1.3rem;
+  margin-top: 15px;
+}
+.box ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+.box ul li {
+  margin-bottom: 8px;
+}
+
+/* === Animal Gallery === */
+.animal-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+.animal-gallery img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #6C9A8B;
+  transition: transform 0.3s;
+}
+.animal-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* === Contact Section === */
+.contact-section {
+  padding: 60px 30px;
+  background-color: #F2FFF0;
+}
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+  max-width: 1200px;
+  margin: auto;
+}
+.contact-form, .contact-info {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  background-color: #A1CDA8;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(47, 82, 51, 0.1);
+}
+.contact-form h2, .contact-info h2 {
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #F2FFF0;
+  color: #2D2D2D;
+  font-size: 1rem;
+}
+.contact-form textarea {
+  resize: vertical;
+  height: 120px;
+}
+.contact-form button {
+  background-color: #6C9A8B;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+.contact-form button:hover {
+  background-color: #2F5233;
+}
+.contact-info p {
+  margin-bottom: 12px;
+}
+.social-icons {
+  margin-top: 15px;
+}
+.social-icons a img {
+  width: 30px;
+  margin-right: 15px;
+  filter: brightness(0.5) saturate(100%) invert(55%) sepia(9%) saturate(401%) hue-rotate(85deg) brightness(90%) contrast(92%);
+}
+
+/* === Blog Section === */
+.blog-snippet {
+  font-size: 0.95rem;
+  color: #2D2D2D;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-header h2 {
+  font-size: 2rem;
+}
+.section-header p {
+  font-style: italic;
+  font-size: 1rem;
+  color: #6C9A8B;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .overlay h1 {
+    font-size: 2.5rem;
+  }
+  .columns, .contact-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+  .animal-gallery img {
+    width: 90px;
+    height: 90px;
+  }
+}
