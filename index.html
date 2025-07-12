@@ -184,6 +184,150 @@
       });
     }
   </script>
+<script>
+  // Scroll within slider
+  function scrollGallery(className, dir) {
+    document.querySelector(`.${className}`).scrollBy({left: dir==='left' ? -260 : 260, behavior: 'smooth'});
+  }
+
+  // Show image description
+  const modal = document.getElementById('imgModal');
+  const modalDesc = document.getElementById('modalDescription');
+  const closeBtn = document.querySelector('.close-btn');
+
+  function showDescription(text) {
+    modalDesc.textContent = text;
+    modal.style.display = 'block';
+  }
+
+  closeBtn.onclick = () => modal.style.display = 'none';
+  window.onclick = e => { if(e.target === modal) modal.style.display = 'none'; };
+</script>
 
 </body>
 </html>
+<!-- Gallery Section -->
+<section class="gallery-section page-section" id="gallery" style="display:none;">
+  <div class="section-header">
+    <h2>Gallery</h2>
+    <p>A visual story of my life, memories, and moments.</p>
+  </div>
+
+  <div class="columns">
+    <!-- Column 1 -->
+    <div class="column">
+      <!-- Vintage -->
+      <div class="gallery-box">
+        <h3>Vintage</h3>
+        <div class="slider-controls">
+          <button class="slider-btn" onclick="scrollGallery('vintage-slider','left')">⟵</button>
+          <button class="slider-btn" onclick="scrollGallery('vintage-slider','right')">⟶</button>
+        </div>
+        <div class="gallery-slider vintage-slider">
+          <div class="image-container">
+            <img src="https://drive.google.com/uc?export=view&id=1k1RKdz3H-Yvj3T0MHX6rguaktGRwJVRw" alt="Vintage 2008">
+            <button class="detail-btn" onclick="showDescription('Sherqilla, I was almost 9 years old. Back to 2008.')">Detail</button>
+          </div>
+          <div class="image-container">
+            <img src="https://drive.google.com/uc?export=view&id=1kO_bFSl010n8_HHde1Sa1hMsJA1s1VqL" alt="Vintage 2003">
+            <button class="detail-btn" onclick="showDescription('With my uncle Himat Mir at Sherqilla, back to 2003.')">Detail</button>
+          </div>
+        </div>
+        <button class="album-button">View Album</button>
+      </div>
+
+      <!-- Gilgit Baltistan -->
+      <div class="gallery-box">
+        <h3>Gilgit Baltistan</h3>
+        <div class="slider-controls">
+          <button class="slider-btn" onclick="scrollGallery('gb-slider','left')">⟵</button>
+          <button class="slider-btn" onclick="scrollGallery('gb-slider','right')">⟶</button>
+        </div>
+        <div class="gallery-slider gb-slider">
+          <div class="image-container">
+            <img src="https://drive.google.com/uc?export=view&id=1pvCvOXVTXiAzC6F4_X3sbm2OSX6VNrSL" alt="Gilgit Baltistan">
+            <button class="detail-btn" onclick="showDescription('Little princess holding the flag of Balawaristan.')">Detail</button>
+          </div>
+        </div>
+        <button class="album-button">View Album</button>
+      </div>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="column">
+      <!-- Travel Stories -->
+      <div class="gallery-box">
+        <h3>Travel Stories</h3>
+        <div class="slider-controls">
+          <button class="slider-btn" onclick="scrollGallery('travel-slider','left')">⟵</button>
+          <button class="slider-btn" onclick="scrollGallery('travel-slider','right')">⟶</button>
+        </div>
+        <div class="gallery-slider travel-slider">
+          <div class="image-container">
+            <img src="https://drive.google.com/uc?export=view&id=1O4w4C67BOOegsSdMANpnEDMCWjQxoX0P" alt="Hunza 2016">
+            <button class="detail-btn" onclick="showDescription('Hunza, in background Baltit fort cannon, back to 2016.')">Detail</button>
+          </div>
+        </div>
+        <button class="album-button">View Album</button>
+      </div>
+
+      <!-- School -->
+      <div class="gallery-box">
+        <h3>School</h3>
+        <div class="slider-controls">
+          <button class="slider-btn" onclick="scrollGallery('school-slider','left')">⟵</button>
+          <button class="slider-btn" onclick="scrollGallery('school-slider','right')">⟶</button>
+        </div>
+        <div class="gallery-slider school-slider">
+          <div class="image-container">
+            <img src="https://drive.google.com/uc?export=view&id=1Yh1zgw2kAMIbsb6M2g4gbyL4aWmBvamW" alt="School 2014">
+            <button class="detail-btn" onclick="showDescription('Grade 8th students at Middle School Gitch, Back to 2014.')">Detail</button>
+          </div>
+          <div class="image-container">
+            <img src="https://drive.google.com/uc?export=view&id=12LVHxLN6K9wGbFYFV8Yv34X3? etc" alt="AKHSS 2018">
+            <button class="detail-btn" onclick="showDescription('Aga Khan Higher Secondary School Gilgit, with Inayat Hussain and Waseem Jan, dated June 2018.')">Detail</button>
+          </div>
+          <div class="image-container">
+            <img src="https://drive.google.com/uc?export=view&id=1gt0b33nf1hH778vuCAZAC-gI-XP7QasR" alt="Batch 2020">
+            <button class="detail-btn" onclick="showDescription('AKHSS Gilgit Batch 2020 pre Engineering section II.')">Detail</button>
+          </div>
+        </div>
+        <button class="album-button">View Album</button>
+      </div>
+
+      <!-- Life -->
+      <div class="gallery-box">
+        <h3>Life</h3>
+        <div class="slider-controls">
+          <button class="slider-btn" onclick="scrollGallery('life-slider','left')">⟵</button>
+          <button class="slider-btn" onclick="scrollGallery('life-slider','right')">⟶</button>
+        </div>
+        <div class="gallery-slider life-slider">
+          <div class="image-container">
+            <img src="https://drive.google.com/uc?export=view&id=1krp5VHCKBJ8lyOSk9lFBXw2n-ndNiIUS" alt="Naltar Valley">
+            <button class="detail-btn" onclick="showDescription('With my friend Usama at Naltar Valley, back to 2016.')">Detail</button>
+          </div>
+          <div class="image-container">
+            <img src="https://drive.google.com/uc?export=view&id=1FblVgZFBoF00jycpBvtg37MtbfX6H50n" alt="NUST Main">
+            <button class="detail-btn" onclick="showDescription('NUST main office, final year.')">Detail</button>
+          </div>
+        </div>
+        <button class="album-button">View Album</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Shared Contact Section -->
+  <div id="shared-contact"></div>
+</section>
+
+<!-- Image Description Modal -->
+<div id="imgModal" class="modal">
+  <div class="modal-content">
+    <button class="close-btn">&times;</button>
+    <h3>Image Detail</h3>
+    <p id="modalDescription"></p>
+  </div>
+</div>
+
+
